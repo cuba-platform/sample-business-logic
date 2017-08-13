@@ -15,12 +15,12 @@
         <doc caption="Documentation" page="init_values_in_class.html"/>
         <descriptor/>
         <controller/>
-        <file path="com/company/sample/web/ex2/DiscountCalculator.java"/>
+        <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
     <screen id="sample$Customer.edit_2">
         <doc caption="Documentation" page="init_values_in_class.html"/>
         <descriptor/>
         <controller/>
-        <file path="com/company/sample/web/ex2/DiscountCalculator.java"/>
+        <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
 </sample-info>
