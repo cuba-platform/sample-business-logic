@@ -1,6 +1,7 @@
 <sample-info>
-    <doc-root value="https://doc.cuba-platform.com/manual-6.6/"/>
-    <file-root value="https://github.com/cuba-platform/sample-screen-manipulation/blob/master/"/>
+    <default>
+        <link caption="Project on GitHub" url="${sample.projectLink}"/>
+    </default>
     <screen id="sample$Customer.browse_1">
         <doc caption="Documentation" page="init_values_in_class.html"/>
         <descriptor/>

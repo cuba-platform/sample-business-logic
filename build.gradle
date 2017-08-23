@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.6.1'
+    ext.cubaVersion = '6.6.2'
     repositories {
         mavenLocal()
         maven {
@@ -20,6 +20,7 @@ def globalModule = project(':app-global')
 def coreModule = project(':app-core')
 def guiModule = project(':app-gui')
 def webModule = project(':app-web')
+def webThemesModule = project(':app-web-themes')
 
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
 
@@ -35,6 +36,9 @@ cuba {
     }
     tomcat {
         dir = "$project.rootDir/deploy/tomcat"
+    }
+    ide {
+        vcs = 'Git'
     }
 }
 
@@ -184,6 +188,30 @@ configure(webModule) {
         appName = 'app'
         appJars('app-global', 'app-gui', 'app-web')
     }
+    task buildScssThemes(type: CubaWebScssThemeCreation)
+    task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
+    assemble.dependsOn buildScssThemes
+}
+
+configure(webThemesModule) {
+    apply(plugin: 'java')
+    apply(plugin: 'maven')
+    apply(plugin: 'cuba')
+
+    appModuleType = 'web-themes'
+
+    buildDir = file('../build/scss-themes')
+
+    sourceSets {
+        main {
+            java {
+                srcDir '.'
+            }
+            resources {
+                srcDir '.'
+            }
+        }
+    }
 }
 
 
@@ -212,3 +240,9 @@ task wrapper(type: Wrapper) {
 }
 
 apply from: 'extra.gradle'
+
+task buildUberJar(type: CubaUberJarBuilding) {
+    singleJar = true
+    coreJettyEnvPath = 'modules/core/web/META-INF/jetty-env.xml'
+    appProperties = [:]
+}
