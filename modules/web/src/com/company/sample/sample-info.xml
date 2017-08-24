@@ -32,4 +32,8 @@
         <file path="modules/global/src/com/company/sample/service/DiscountService.java"/>
         <file path="modules/core/src/com/company/sample/service/DiscountServiceBean.java"/>
     </screen>
+    <screen id="sample$orderBrowseWithCustomers">
+        <doc caption="Documentation: Logic in Entity Listeners" page="logic_in_entity_listeners_tutor.html"/>
+        <file path="modules/core/src/com/company/sample/listener/OrderEntityListener.java"/>
+    </screen>
 </sample-info>

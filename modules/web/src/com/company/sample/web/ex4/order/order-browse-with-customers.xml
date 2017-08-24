@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.sample.web.ex4.order.OrderBrowseWithCustomers"
+        focusComponent="ordersTable"
+        lookupComponent="ordersTable"
+        messagesPack="com.company.sample.web.ex4.order">
+    <dsContext>
+        <groupDatasource id="ordersDs"
+                         class="com.company.sample.entity.Order"
+                         view="order-view">
+            <query>
+                <![CDATA[select e from sample$Order e]]>
+            </query>
+        </groupDatasource>
+        <collectionDatasource id="customersDs"
+                              class="com.company.sample.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sample$Customer e order by e.name]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <vbox id="ordersTable_split"
+              height="100%">
+            <groupTable id="ordersTable"
+                        height="100%"
+                        width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                    <action id="refresh"/>
+                </actions>
+                <columns>
+                    <column id="date"/>
+                    <column id="customer"/>
+                    <column id="amount"/>
+                </columns>
+                <rows datasource="ordersDs"/>
+                <rowsCount/>
+                <buttonsPanel id="buttonsPanel"
+                              alwaysVisible="true">
+                    <button id="createBtn"
+                            action="ordersTable.create"/>
+                    <button id="editBtn"
+                            action="ordersTable.edit"/>
+                    <button id="removeBtn"
+                            action="ordersTable.remove"/>
+                    <button id="refreshBtn"
+                            action="ordersTable.refresh"/>
+                </buttonsPanel>
+            </groupTable>
+            <groupBox caption="All customers"
+                      height="100%">
+                <table id="customersTable"
+                       height="100%"
+                       width="100%">
+                    <actions>
+                        <action id="refresh"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                        <column id="discount"/>
+                    </columns>
+                    <rows datasource="customersDs"/>
+                    <buttonsPanel>
+                        <button action="customersTable.refresh"
+                                align="MIDDLE_LEFT"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+        </vbox>
+    </layout>
+</window>

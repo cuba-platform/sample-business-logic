@@ -13,7 +13,9 @@ import javax.persistence.TemporalType;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.Lookup;
 import com.haulmont.cuba.core.entity.annotation.LookupType;
+import com.haulmont.cuba.core.entity.annotation.Listeners;
 
+@Listeners("sample_OrderEntityListener")
 @Table(name = "SAMPLE_ORDER")
 @Entity(name = "sample$Order")
 public class Order extends StandardEntity {

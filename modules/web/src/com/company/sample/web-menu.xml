@@ -5,6 +5,7 @@
         <item screen="sample$Customer.browse_1"/>
         <item screen="sample$Customer.browse_2"/>
         <item screen="sample$Customer.browse_3"/>
+        <item screen="sample$orderBrowseWithCustomers"/>
     </menu>
     <menu id="data">
         <item screen="sample$Order.browse"/>

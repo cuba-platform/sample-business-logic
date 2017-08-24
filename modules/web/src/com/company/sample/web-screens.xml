@@ -17,4 +17,6 @@
             template="com/company/sample/web/ex3/customer/customer-browse.xml"/>
     <screen id="sample$Customer.edit_3"
             template="com/company/sample/web/ex3/customer/customer-edit.xml"/>
+    <screen id="sample$orderBrowseWithCustomers"
+            template="com/company/sample/web/ex4/order/order-browse-with-customers.xml"/>
 </screen-config>
