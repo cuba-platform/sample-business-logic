@@ -18,17 +18,13 @@
                 width="800"/>
     <layout expand="customersTable"
             spacing="true">
-        <filter id="filter"
-                applyTo="customersTable"
-                datasource="customersDs">
-            <properties include=".*"/>
-        </filter>
         <groupTable id="customersTable"
                     width="100%">
             <actions>
                 <action id="create"/>
                 <action id="edit"/>
                 <action id="remove"/>
+                <action id="refresh"/>
                 <action id="calcDiscount"
                         caption="Calculate discount"
                         invoke="onCalcDiscount"/>
@@ -47,6 +43,8 @@
                         action="customersTable.edit"/>
                 <button id="removeBtn"
                         action="customersTable.remove"/>
+                <button id="refreshBtn"
+                        action="customersTable.refresh"/>
                 <button action="customersTable.calcDiscount"/>
             </buttonsPanel>
         </groupTable>

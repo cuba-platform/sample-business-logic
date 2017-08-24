@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="com.company.sample.web.ex2.customer.CustomerBrowse"
+        class="com.company.sample.web.ex3.customer.CustomerBrowse"
         focusComponent="customersTable"
         lookupComponent="customersTable"
-        messagesPack="com.company.sample.web.ex2.customer">
+        messagesPack="com.company.sample.web.ex3.customer">
     <dsContext>
         <groupDatasource id="customersDs"
                          class="com.company.sample.entity.Customer"

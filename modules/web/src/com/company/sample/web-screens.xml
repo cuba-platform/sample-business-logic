@@ -13,4 +13,8 @@
             template="com/company/sample/web/ex2/customer/customer-browse.xml"/>
     <screen id="sample$Customer.edit_2"
             template="com/company/sample/web/ex2/customer/customer-edit.xml"/>
+    <screen id="sample$Customer.browse_3"
+            template="com/company/sample/web/ex3/customer/customer-browse.xml"/>
+    <screen id="sample$Customer.edit_3"
+            template="com/company/sample/web/ex3/customer/customer-edit.xml"/>
 </screen-config>
