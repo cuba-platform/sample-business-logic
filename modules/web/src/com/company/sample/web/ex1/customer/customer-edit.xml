@@ -21,9 +21,6 @@
                 <field property="discount"/>
             </column>
         </fieldGroup>
-        <button id="calcDiscountBtn"
-                caption="Calculate discount"
-                invoke="onCalcDiscountBtnClick"/>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

@@ -3,24 +3,20 @@
         <link caption="Project on GitHub" url="${sample.projectLink}"/>
     </default>
     <screen id="sample$Customer.browse_1">
-        <doc caption="Documentation" page="init_values_in_class.html"/>
-        <descriptor/>
+        <doc caption="Documentation" page="logic_in_controllers_tutor.html"/>
         <controller/>
     </screen>
     <screen id="sample$Customer.edit_1">
-        <doc caption="Documentation" page="init_values_in_class.html"/>
-        <descriptor/>
+        <doc caption="Documentation" page="logic_in_controllers_tutor.html"/>
         <controller/>
     </screen>
     <screen id="sample$Customer.browse_2">
-        <doc caption="Documentation" page="init_values_in_class.html"/>
-        <descriptor/>
+        <doc caption="Documentation" page="logic_in_client_beans_tutor.html"/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
     <screen id="sample$Customer.edit_2">
-        <doc caption="Documentation" page="init_values_in_class.html"/>
-        <descriptor/>
+        <doc caption="Documentation" page="logic_in_client_beans_tutor.html"/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
