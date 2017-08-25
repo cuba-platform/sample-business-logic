@@ -8,4 +8,14 @@
     <!-- Annotation-based beans -->
     <context:component-scan base-package="com.company.sample"/>
 
+    <!-- JMX beans registration -->
+    <bean id="sample_MBeanExporter" lazy-init="false"
+          class="com.haulmont.cuba.core.sys.jmx.MBeanExporter">
+        <property name="beans">
+            <map>
+                <entry key="${cuba.webContextName}.sample:type=Discounts"
+                       value-ref="sample_DiscountsMBean"/>
+            </map>
+        </property>
+    </bean>
 </beans>

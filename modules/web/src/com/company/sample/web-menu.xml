@@ -6,9 +6,7 @@
         <item screen="sample$Customer.browse_2"/>
         <item screen="sample$Customer.browse_3"/>
         <item screen="sample$orderBrowseWithCustomers"/>
-    </menu>
-    <menu id="data">
-        <item screen="sample$Order.browse"/>
+        <item screen="jmxConsole"/>
     </menu>
     <menu id="help">
         <item openType="DIALOG"

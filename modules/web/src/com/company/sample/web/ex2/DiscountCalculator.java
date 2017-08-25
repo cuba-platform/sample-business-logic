@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * Client tier bean encapsulating logic of calculating discounts.
+ * Managed bean of the client tier encapsulating logic of calculating discounts.
  */
 @Component("sample_DiscountCalculator")
 public class DiscountCalculator {
