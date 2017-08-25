@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-sample"
+    <menu id="initial-menu"
           insertBefore="administration">
         <item screen="sample$Customer.browse_1"/>
         <item screen="sample$Customer.browse_2"/>
         <item screen="sample$Customer.browse_3"/>
         <item screen="sample$orderBrowseWithCustomers"/>
         <item screen="jmxConsole"/>
-    </menu>
-    <menu id="help">
-        <item openType="DIALOG"
-              screen="aboutWindow"/>
     </menu>
 </menu-config>
