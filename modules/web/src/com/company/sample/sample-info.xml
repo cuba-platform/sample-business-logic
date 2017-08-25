@@ -3,37 +3,37 @@
         <link caption="Project on GitHub" url="${sample.projectLink}"/>
     </default>
     <screen id="sample$Customer.browse_1">
-        <doc caption="Documentation: Logic in Controllers" page="logic_in_controllers_tutor.html"/>
+        <doc caption="Documentation: Business Logic in Controllers" page="logic_in_controllers_tutor.html"/>
         <controller/>
     </screen>
     <screen id="sample$Customer.edit_1">
-        <doc caption="Documentation: Logic in Controllers" page="logic_in_controllers_tutor.html"/>
+        <doc caption="Documentation: Business Logic in Controllers" page="logic_in_controllers_tutor.html"/>
         <controller/>
     </screen>
     <screen id="sample$Customer.browse_2">
-        <doc caption="Documentation: Logic in Client Tier Beans" page="logic_in_client_beans_tutor.html"/>
+        <doc caption="Documentation: Using Client Tier Beans" page="using_client_beans_tutor.html"/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
     <screen id="sample$Customer.edit_2">
-        <doc caption="Documentation: Logic in Client Tier Beans" page="logic_in_client_beans_tutor.html"/>
+        <doc caption="Documentation: Logic in Client Tier Beans" page="using_client_beans_tutor.html"/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
     <screen id="sample$Customer.browse_3">
-        <doc caption="Documentation: Logic in Middleware Services" page="logic_in_services_tutor.html"/>
+        <doc caption="Documentation: Using Middleware Services" page="using_services_tutor.html"/>
         <controller/>
         <file path="modules/global/src/com/company/sample/service/DiscountService.java"/>
         <file path="modules/core/src/com/company/sample/service/DiscountServiceBean.java"/>
     </screen>
     <screen id="sample$Customer.edit_3">
-        <doc caption="Documentation: Logic in Middleware Services" page="logic_in_services_tutor.html"/>
+        <doc caption="Documentation: Using Middleware Services" page="using_services_tutor.html"/>
         <controller/>
         <file path="modules/global/src/com/company/sample/service/DiscountService.java"/>
         <file path="modules/core/src/com/company/sample/service/DiscountServiceBean.java"/>
     </screen>
     <screen id="sample$orderBrowseWithCustomers">
-        <doc caption="Documentation: Logic in Entity Listeners" page="logic_in_entity_listeners_tutor.html"/>
+        <doc caption="Documentation: Using Entity Listeners" page="using_entity_listeners_tutor.html"/>
         <file path="modules/core/src/com/company/sample/listener/OrderEntityListener.java"/>
     </screen>
 </sample-info>
