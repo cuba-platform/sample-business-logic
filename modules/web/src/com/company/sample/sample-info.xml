@@ -46,4 +46,9 @@
         <file path="modules/core/src/com/company/sample/core/DiscountCalculator.java"/>
         <file path="modules/core/src/com/company/sample/spring.xml"/>
     </screen>
+    <screen id="sample$Employee.browse">
+        <doc caption="Recipe: Running Code on Startup" page="app_start_recipe.html" style="highlight"/>
+        <file path="modules/core/src/com/company/sample/core/AppLifecycle.java"/>
+        <file path="modules/core/src/com/company/sample/listener/UserEntityListener.java"/>
+    </screen>
 </sample-info>

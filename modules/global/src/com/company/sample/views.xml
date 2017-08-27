@@ -6,4 +6,10 @@
         <property name="customer"
                   view="_minimal"/>
     </view>
+    <view class="com.company.sample.entity.Employee"
+          extends="_local"
+          name="employee-view">
+        <property name="user"
+                  view="_minimal"/>
+    </view>
 </views>

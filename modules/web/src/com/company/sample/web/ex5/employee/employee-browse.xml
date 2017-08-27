@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.sample.web.ex5.employee.EmployeeBrowse"
+        focusComponent="employeesTable"
+        lookupComponent="employeesTable"
+        messagesPack="com.company.sample.web.ex5.employee">
+    <dsContext>
+        <groupDatasource id="employeesDs"
+                         class="com.company.sample.entity.Employee"
+                         view="employee-view">
+            <query>
+                <![CDATA[select e from sample$Employee e]]>
+            </query>
+        </groupDatasource>
+        <collectionDatasource id="usersDs"
+                              class="com.haulmont.cuba.security.entity.User"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sec$User e order by e.login]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="tablesBox"
+            spacing="true">
+        <label value="Edit the name of a user linked to an employee, refresh the users table and see that employee's name has been changed."/>
+        <vbox id="tablesBox"
+              spacing="true">
+            <groupBox id="usersBox"
+                      caption="Users"
+                      height="100%"
+                      stylename="light">
+                <table id="usersTable"
+                       height="100%"
+                       width="100%">
+                    <actions>
+                        <action id="edit"/>
+                        <action id="refresh"/>
+                    </actions>
+                    <columns>
+                        <column id="login"/>
+                        <column id="name"/>
+                    </columns>
+                    <rows datasource="usersDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true">
+                        <button id="editBtn"
+                                action="usersTable.edit"/>
+                        <button action="usersTable.refresh"/>
+                    </buttonsPanel>
+                </table>
+            </groupBox>
+            <groupBox id="employeesBox"
+                      caption="Employees"
+                      height="100%"
+                      stylename="light">
+                <groupTable id="employeesTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="edit"/>
+                        <action id="refresh"/>
+                    </actions>
+                    <columns>
+                        <column id="name"/>
+                        <column id="address"/>
+                        <column id="user"/>
+                    </columns>
+                    <rows datasource="employeesDs"/>
+                    <rowsCount/>
+                    <buttonsPanel alwaysVisible="true">
+                        <button action="employeesTable.edit"/>
+                        <button action="employeesTable.refresh"/>
+                    </buttonsPanel>
+                </groupTable>
+            </groupBox>
+        </vbox>
+    </layout>
+</window>

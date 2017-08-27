@@ -23,39 +23,45 @@
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout spacing="true">
-        <vbox id="ordersTable_split"
-              height="100%">
-            <groupTable id="ordersTable"
-                        height="100%"
-                        width="100%">
-                <actions>
-                    <action id="create"/>
-                    <action id="edit"/>
-                    <action id="remove"/>
-                    <action id="refresh"/>
-                </actions>
-                <columns>
-                    <column id="date"/>
-                    <column id="customer"/>
-                    <column id="amount"/>
-                </columns>
-                <rows datasource="ordersDs"/>
-                <rowsCount/>
-                <buttonsPanel id="buttonsPanel"
-                              alwaysVisible="true">
-                    <button id="createBtn"
-                            action="ordersTable.create"/>
-                    <button id="editBtn"
-                            action="ordersTable.edit"/>
-                    <button id="removeBtn"
-                            action="ordersTable.remove"/>
-                    <button id="refreshBtn"
-                            action="ordersTable.refresh"/>
-                </buttonsPanel>
-            </groupTable>
-            <groupBox caption="All customers"
-                      height="100%">
+    <layout expand="tablesBox"
+            spacing="true">
+        <label value="Create, edit or remove an order, then refresh the customers table, and you will see that the discount of the corresponding customer is changed."/>
+        <vbox id="tablesBox">
+            <groupBox caption="Orders"
+                      height="100%"
+                      stylename="light">
+                <groupTable id="ordersTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                        <action id="refresh"/>
+                    </actions>
+                    <columns>
+                        <column id="date"/>
+                        <column id="customer"/>
+                        <column id="amount"/>
+                    </columns>
+                    <rows datasource="ordersDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true">
+                        <button id="createBtn"
+                                action="ordersTable.create"/>
+                        <button id="editBtn"
+                                action="ordersTable.edit"/>
+                        <button id="removeBtn"
+                                action="ordersTable.remove"/>
+                        <button id="refreshBtn"
+                                action="ordersTable.refresh"/>
+                    </buttonsPanel>
+                </groupTable>
+            </groupBox>
+            <groupBox caption="Customers"
+                      height="100%"
+                      stylename="light">
                 <table id="customersTable"
                        height="100%"
                        width="100%">

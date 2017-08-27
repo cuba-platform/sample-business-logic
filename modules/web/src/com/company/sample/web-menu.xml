@@ -7,5 +7,6 @@
         <item screen="sample$Customer.browse_3"/>
         <item screen="sample$orderBrowseWithCustomers"/>
         <item screen="jmxConsole"/>
+        <item screen="sample$Employee.browse"/>
     </menu>
 </menu-config>

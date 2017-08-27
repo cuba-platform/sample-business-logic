@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.sample.web.ex5.user.UserEdit"
+        datasource="userDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.sample.web.ex5.user">
+    <dsContext>
+        <datasource id="userDs"
+                    class="com.haulmont.cuba.security.entity.User"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="userDs">
+            <column width="250px">
+                <field editable="false"
+                       property="login"/>
+                <field property="name"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

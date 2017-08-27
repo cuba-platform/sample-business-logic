@@ -19,4 +19,10 @@
             template="com/company/sample/web/ex3/customer/customer-edit.xml"/>
     <screen id="sample$orderBrowseWithCustomers"
             template="com/company/sample/web/ex4/order/order-browse-with-customers.xml"/>
+    <screen id="sample$Employee.browse"
+            template="com/company/sample/web/ex5/employee/employee-browse.xml"/>
+    <screen id="sample$Employee.edit"
+            template="com/company/sample/web/ex5/employee/employee-edit.xml"/>
+    <screen id="sample$userEdit"
+            template="com/company/sample/web/ex5/user/user-edit.xml"/>
 </screen-config>
