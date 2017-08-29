@@ -241,5 +241,6 @@ apply from: 'extra.gradle'
 task buildUberJar(type: CubaUberJarBuilding) {
     singleJar = true
     coreJettyEnvPath = 'modules/core/web/META-INF/jetty-env.xml'
-    appProperties = [:]
+    logbackConfigurationFile = 'etc/logback.xml'
+    webPort = 7081
 }
