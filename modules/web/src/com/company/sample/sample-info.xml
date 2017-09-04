@@ -4,19 +4,23 @@
     </default>
     <screen id="sample$Customer.browse_1">
         <doc caption="Recipe: Business Logic in Controllers" page="logic_in_controllers_recipe.html" style="highlight"/>
+        <descriptor/>
         <controller/>
     </screen>
     <screen id="sample$Customer.edit_1">
         <doc caption="Recipe: Business Logic in Controllers" page="logic_in_controllers_recipe.html" style="highlight"/>
+        <descriptor/>
         <controller/>
     </screen>
     <screen id="sample$Customer.browse_2">
         <doc caption="Recipe: Using Client Tier Beans" page="using_client_beans_recipe.html" style="highlight"/>
+        <descriptor/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
     <screen id="sample$Customer.edit_2">
         <doc caption="Recipe: Logic in Client Tier Beans" page="using_client_beans_recipe.html" style="highlight"/>
+        <descriptor/>
         <controller/>
         <file path="modules/web/src/com/company/sample/web/ex2/DiscountCalculator.java"/>
     </screen>
@@ -36,6 +40,7 @@
     </screen>
     <screen id="sample$orderBrowseWithCustomers">
         <doc caption="Recipe: Using Entity Listeners" page="using_entity_listeners_recipe.html" style="highlight"/>
+        <file path="modules/global/src/com/company/sample/entity/Order.java"/>
         <file path="modules/core/src/com/company/sample/listener/OrderEntityListener.java"/>
         <file path="modules/core/src/com/company/sample/core/DiscountCalculator.java"/>
     </screen>
