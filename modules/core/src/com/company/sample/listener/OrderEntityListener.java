@@ -20,24 +20,27 @@ public class OrderEntityListener implements BeforeDeleteEntityListener<Order>, B
 
     @Override
     public void onBeforeDelete(Order entity, EntityManager entityManager) {
-        calculateDiscount(entity.getCustomer());
+        calculateDiscount(entity.getCustomer(), entityManager);
     }
 
     @Override
     public void onBeforeInsert(Order entity, EntityManager entityManager) {
-        calculateDiscount(entity.getCustomer());
+        calculateDiscount(entity.getCustomer(), entityManager);
     }
 
     @Override
     public void onBeforeUpdate(Order entity, EntityManager entityManager) {
-        calculateDiscount(entity.getCustomer());
+        calculateDiscount(entity.getCustomer(), entityManager);
     }
 
-    private void calculateDiscount(Customer customer) {
+    private void calculateDiscount(Customer customer, EntityManager entityManager) {
         // Delegate calculation to a managed bean of the middle tier
         BigDecimal discount = discountCalculator.calculateDiscount(customer.getId());
 
+        // Merge customer instance because it comes here as part of another entity's object graph and can be detached
+        Customer managedCustomer = entityManager.merge(customer);
+
         // Set the discount for the customer. It will be saved on transaction commit.
-        customer.setDiscount(discount);
+        managedCustomer.setDiscount(discount);
     }
 }
