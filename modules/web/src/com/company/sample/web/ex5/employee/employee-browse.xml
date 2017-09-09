@@ -25,7 +25,7 @@
                 width="800"/>
     <layout expand="tablesBox"
             spacing="true">
-        <label value="Edit the name of a user linked to an employee, refresh the users table and see that employee's name has been changed."/>
+        <label value="Edit the name of a user linked to an employee, refresh the employees table and see that employee's name has been changed."/>
         <vbox id="tablesBox"
               spacing="true">
             <groupBox id="usersBox"
