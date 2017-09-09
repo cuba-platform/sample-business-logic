@@ -28,6 +28,8 @@ public class DiscountCalculator {
                 "select sum(e.amount) from sample$Order e where e.customer.id = :custId");
         query.setParameter("custId", customerId);
         BigDecimal sum = (BigDecimal) query.getSingleResult();
+        if (sum == null)
+            sum = BigDecimal.ZERO;
 
         // Decide about discount
         BigDecimal discount = BigDecimal.ZERO;
