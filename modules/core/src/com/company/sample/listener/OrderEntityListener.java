@@ -34,6 +34,9 @@ public class OrderEntityListener implements BeforeDeleteEntityListener<Order>, B
     }
 
     private void calculateDiscount(Customer customer, EntityManager entityManager) {
+        if (customer == null)
+            return;
+        
         // Delegate calculation to a managed bean of the middle tier
         BigDecimal discount = discountCalculator.calculateDiscount(customer.getId());
 
