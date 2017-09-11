@@ -60,7 +60,10 @@ public class CustomerBrowse extends AbstractLookup {
         List<Order> orders = dataManager.loadList(loadContext);
 
         // Calculate the total sum
-        BigDecimal sum = orders.stream().map(Order::getAmount).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
+        BigDecimal sum = orders.stream()
+                .map(order -> order.getAmount() != null ? order.getAmount() : BigDecimal.ZERO)
+                .reduce(BigDecimal::add)
+                .orElse(BigDecimal.ZERO);
 
         // Decide about discount
         BigDecimal discount = BigDecimal.ZERO;
