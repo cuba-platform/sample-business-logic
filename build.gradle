@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.6.3'
+    ext.cubaVersion = '6.8.1'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
@@ -31,8 +31,8 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'com.company.sample'
-        version = '0.1'
-        isSnapshot = true
+        version = "0.2"
+        isSnapshot = false
     }
     tomcat {
         dir = "$project.rootDir/deploy/tomcat"
@@ -44,7 +44,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.samplebase:sample-base-global:1.0.0")
+    appComponent("com.haulmont.addon.samplebase:sample-base-global:1.2.0")
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
@@ -233,12 +233,13 @@ task restart(dependsOn: ['stop', ':business-logic-core:deploy', ':business-logic
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.4'
+    gradleVersion = '4.3.1'
 }
 
 apply from: 'extra.gradle'
 
 task buildUberJar(type: CubaUberJarBuilding) {
+    appProperties = [:]
     singleJar = true
     coreJettyEnvPath = 'modules/core/web/META-INF/jetty-env.xml'
     logbackConfigurationFile = 'etc/logback.xml'

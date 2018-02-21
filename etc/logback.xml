@@ -39,6 +39,8 @@
         <appender-ref ref="File"/>
     </root>
 
+    <logger name="org.eclipse.jetty" level="INFO"/>
+
     <!-- Begin CUBA -->
 
     <logger name="com.haulmont.cuba" level="DEBUG"/>
