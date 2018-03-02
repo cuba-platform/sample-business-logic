@@ -67,12 +67,12 @@ public class CustomerBrowse extends AbstractLookup {
 
         // Decide about discount
         BigDecimal discount = BigDecimal.ZERO;
-        if (sum.intValue() > 100)
-            discount = new BigDecimal("10");
+        if (sum.intValue() > 300)
+            discount = new BigDecimal("30");
         else if (sum.intValue() > 200)
             discount = new BigDecimal("20");
-        else if (sum.intValue() > 300)
-            discount = new BigDecimal("30");
+        else if (sum.intValue() > 100)
+            discount = new BigDecimal("10");
         // Add some randomness to always get a new value for the demonstration purpose
         discount = discount.multiply(new BigDecimal(Math.random()));
 
